@@ -174,7 +174,7 @@
                             <li><a href="#contact">Contact us</a></li>
                         </ul>
                     </nav>
-                    <div class="menu-btns light d-block d-md-none" >
+                    <div class="menu-btns light d-block d-md-none">
 
                         <button class="menubars menubars-light" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#menubar">
@@ -201,7 +201,8 @@
             <div class="sidebar__socials">
                 <ul>
                     <li>
-                        <a href="https://www.facebook.com/profile.php?id=61551564486273&rdid=DPAPVHVsbYWKcGwq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LK63FN9pm%2F#">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61551564486273&rdid=DPAPVHVsbYWKcGwq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1LK63FN9pm%2F#">
                             <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -233,7 +234,7 @@
                         </a>
                     </li>
                 </ul>
-            </div> 
+            </div>
         </div>
     </div>
     <!-- Sidebar area end here -->
@@ -272,8 +273,8 @@
                         <br><br><br><br>
                         <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms"> Recon
                             Accounting </h1>
-                            <h3 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms"> Audit • Tax •
-                                Bookkeeping • Consultancy </h3>
+                        <h3 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms"> Audit • Tax •
+                            Bookkeeping • Consultancy </h3>
                     </div>
 
 
@@ -1337,25 +1338,40 @@
                                 </ul>
                             </div>
                             <div class="contact-two__form">
-                                <form action="#">
-                                    <div class="row g-4 mb-4">
-                                        <div class="col-6">
-                                            <div class="input">
-                                                <input id="name" placeholder="Name" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="input">
-                                                <input id="email" placeholder="E-mail address" type="email">
-                                            </div>
-                                        </div>
+
+                                <?php
+                                    if($_SERVER["REQUEST_METHOD"] == "POST"){
+                                        $name = htmlspecialchars($_POST['name']);
+                                        $email = htmlspecialchars($_POST['email']);
+                                        $message = htmlspecialchars($_POST['message']);
+
+                                        $to = "info@reconaccounting.com";
+                                        $subject = "New Contact Form Message";
+                                        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+                                        $headers = "From: $email";
+
+                                        if(mail($to, $subject, $body, $headers)){
+                                            echo "<p style='color:green;'>✅ Message sent successfully!</p>";
+                                        } else {
+                                            echo "<p style='color:red;'>❌ Failed to send message.</p>";
+                                        }
+                                    }
+                                    ?>
+
+                                <form action="" method="post">
+                                    <div>
+                                        <input id="name" name="name" placeholder="Name" type="text" required>
                                     </div>
-                                    <div class="textarea">
-                                        <textarea name="message" placeholder="Message" id="message"></textarea>
+                                    <div>
+                                        <input id="email" name="email" placeholder="E-mail address" type="email"
+                                            required>
                                     </div>
-                                    <button class="btn-one mt-50" data-splitting data-text="Send Message">Send
-                                        Message</button>
+                                    <div>
+                                        <textarea name="message" placeholder="Message" id="message" required></textarea>
+                                    </div>
+                                    <button type="submit">Send Message</button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
