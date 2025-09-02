@@ -87,7 +87,7 @@
                     </li>
                     <li>
                         <i class="fas fa-solid fa-envelope"></i>
-                        <a href="mailto:bhaatisubhan@gmail.com">bhaatisubhan@gmail.com</a>
+                        <a href="mailto:info@reconaccounting.com">info@reconaccounting.com</a>
                     </li>
                 </ul>
 
@@ -1332,7 +1332,7 @@
                                         </svg>
 
                                         <h5 class="address-text"><a href="tel:03155758865">0315-5758865 </a> <br><a
-                                                href="mailto:asjadalee39@gmail.com">asjadalee39@gmail.com</a></h5>
+                                                href="mailto:info@reconaccounting.com">info@reconaccounting.com</a></h5>
 
                                     </li>
                                 </ul>
@@ -1350,11 +1350,11 @@
                                         $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
                                         $headers = "From: $email";
 
-                                        if(mail($to, $subject, $body, $headers)){
-                                            echo "<p style='color:green;'>✅ Message sent successfully!</p>";
-                                        } else {
-                                            echo "<p style='color:red;'>❌ Failed to send message.</p>";
-                                        }
+                                          mail($to, $subject, $body, $headers);
+
+                                            // reset the form by redirecting to same page
+                                            header("Location: " . $_SERVER['PHP_SELF']);
+                                            exit();
                                     }
                                     ?>
 
