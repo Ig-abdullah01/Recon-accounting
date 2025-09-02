@@ -1359,18 +1359,24 @@
                                     ?>
 
                                 <form action="" method="post">
-                                    <div>
-                                        <input id="name" name="name" placeholder="Name" type="text" required>
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-6">
+                                            <div class="input">
+                                                <input id="name" name="name" placeholder="Name" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="input">
+                                                <input id="email" name="email" placeholder="E-mail address" type="email" required>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input id="email" name="email" placeholder="E-mail address" type="email"
-                                            required>
-                                    </div>
-                                    <div>
+                                    <div class="textarea">
                                         <textarea name="message" placeholder="Message" id="message" required></textarea>
                                     </div>
-                                    <button type="submit">Send Message</button>
+                                    <button class="btn-one mt-50" data-splitting data-text="Send Message">Send Message</button>
                                 </form>
+
 
                             </div>
                         </div>
