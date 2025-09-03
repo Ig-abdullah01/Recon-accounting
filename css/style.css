@@ -4490,7 +4490,7 @@ figure {
 }
 .offcanvas-backdrop {
   background-color: rgba(0, 0, 0, 0.8);
-  cursor: url("/assets/images/icon/x.png") 16 16, auto;
+
 }
 .offcanvas-backdrop.show {
   opacity: 1;

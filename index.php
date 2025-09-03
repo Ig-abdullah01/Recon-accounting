@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recon - Accounting & Business Consulting Services</title>
+    <title>Recon - Accounting & Business Consulting</title>
     <!-- Favicon img -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo/logofavicon1.jpg">
 
@@ -168,11 +168,11 @@
                 <div class="main-menu main-menu-light">
                     <nav aria-label="Main Navigation" style="max-width:991px; display:block;">
                         <ul>
-                            <li style="display:block;"><a href="#home-menu">home</a></li>
-                            <li><a href="#about-menu">about</a></li>
-                            <li><a href="#services-menu">services</a></li>
+                            <li><a href="#home-menu">Home</a></li>
+                            <li><a href="#about-menu">About</a></li>
+                            <li><a href="#services-menu">Services</a></li>
 
-                            <li><a href="#team-menu">team</a></li>
+                            <li><a href="#team-menu">Team</a></li>
                             <li><a href="#contact">Contact us</a></li>
                         </ul>
                     </nav>
@@ -194,7 +194,7 @@
     <!-- Sidebar area start here -->
     <div class="sidebar-area offcanvas offcanvas-end" id="menubar">
         <div class="offcanvas-header">
-            <a href="#" class="logo"> <img src="images/logo/logo1.png" alt="logo"></a>
+            <span href="#" class="logo"> <img src="images/logo/logo1.png" alt="logo"></span>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><i
                     class="fas fa-regular fas fa-xmark"></i></button>
         </div>
@@ -268,10 +268,10 @@
             <div class="banner-five__wrp">
                 <div class="banner-five__content" style="text-align: center; padding: 30px;">
                     <div class="sub-title mb-20 " data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <a href="#" class="Banner-image wow fadeInUp">
+                        <span href="#" class="Banner-image wow fadeInUp">
                             <img src="images/logo/logo1.png" class="animate__animated animate__fadeInDown" alt="logo"
                                 height="100" style="max-width: 80%; height: auto;">
-                        </a>
+                        </span>
                         <br><br><br><br>
                         <h1 class="title wow animate__animated animate__zoomIn animate__delay-5s"> Recon
                             Accounting </h1>
@@ -289,7 +289,7 @@
         <!-- Banner area end here -->
 
         <!-- About area start here -->
-        <section id=" about-menu" class="about-five-area pt-130">
+        <section id="about-menu" class="about-five-area pt-130">
                             <div class="container">
                                 <div class="row g-5">
                                     <div class="col-xl-6">
@@ -820,7 +820,7 @@
                                     <img src="images/team/team-five-image4.jpg" alt="image">
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#T1" class="hover-link-light">Subhan Bhatti</a></h4>
+                                    <h4 class="title"><span  class="hover-link-light">Subhan Bhatti</span></h4>
                                     <span class="sub-title">ACCA Qualified</span>
 
                                 </div>
@@ -832,7 +832,7 @@
                                     <img src="images/team/team-five-image4.jpg" alt="image">
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="#T1" class="hover-link-light">Wasey Tanoli</a></h4>
+                                    <h4 class="title"><span  class="hover-link-light">Wasey Tanoli</span></h4>
                                     <span class="sub-title">ACCA Qualified</span>
 
                                 </div>
@@ -844,7 +844,7 @@
                                     <img src="images/team/team-five-image4.jpg" alt="image">
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="T1" class="hover-link-light">Asjad Ali</a></h4>
+                                    <h4 class="title"><span  class="hover-link-light">Asjad Ali</span></h4>
                                     <span class="sub-title">ACCA Trainee</span>
                                 </div>
                             </div>
@@ -855,8 +855,8 @@
                                     <img src="images/team/team-five-image4.jpg" alt="image">
                                 </div>
                                 <div class="content">
-                                    <h4 class="title"><a href="T1" class="hover-link-light">Aarayz Khan
-                                        </a></h4>
+                                    <h4 class="title"><span href="T1" class="hover-link-light">Aarayz Khan
+                                        </span></h4>
                                     <span class="sub-title">ACCA Finalist</span>
                                 </div>
                             </div>
@@ -1320,24 +1320,7 @@
                             </div>
                             <div class="contact-two__form">
 
-                                <?php
-                                    if($_SERVER["REQUEST_METHOD"] == "POST"){
-                                        $name = htmlspecialchars($_POST['name']);
-                                        $email = htmlspecialchars($_POST['email']);
-                                        $message = htmlspecialchars($_POST['message']);
-
-                                        $to = "info@reconaccounting.com";
-                                        $subject = "New Contact Form Message";
-                                        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-                                        $headers = "From: $email";
-
-                                        if(mail($to, $subject, $body, $headers)){
-                                            echo "✅ Message sent successfully!";
-                                        } else {
-                                            echo "<p style='color:red;'>❌ Failed to send message.</p>";
-                                        }
-                                    }
-                                    ?>
+                                
 
                                 <form action="" method="post">
                                     <div class="row g-4 mb-4">
@@ -1359,7 +1342,24 @@
                                     <button class="btn-one mt-50" data-splitting data-text="Send Message">Send
                                         Message</button>
                                 </form>
+                                    <?php
+                                    if($_SERVER["REQUEST_METHOD"] == "POST"){
+                                        $name = htmlspecialchars($_POST['name']);
+                                        $email = htmlspecialchars($_POST['email']);
+                                        $message = htmlspecialchars($_POST['message']);
 
+                                        $to = "info@reconaccounting.com";
+                                        $subject = "New Contact Form Message";
+                                        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+                                        $headers = "From: $email";
+
+                                        if(mail($to, $subject, $body, $headers)){
+                                            echo "✅ Message sent successfully!";
+                                        } else {
+                                            echo "<p style='color:red;'>❌ Failed to send message.</p>";
+                                        }
+                                    }
+                                    ?>
                                 <?php if ($success) echo "<p style='color:green;'>$success</p>"; ?>
                                 <?php if ($error) echo "<p style='color:red;'>$error</p>"; ?>
                             </div>
@@ -1448,11 +1448,11 @@
                         <a href="#" class="logo">
                             <img src="images/logo/logo1.png" alt="logo">
                         </a>
-                        <p class="text">We are professional organization that offers specialized expertise advice.
+                        <p class="text">Your partner in reliable accounting, reporting, and consultancy solutions
                         </p>
                     </div>
                     <div class="bottom">
-                        <p class="copyright-text">&copy; 2025 <a href="#">Abdullah Khalid</a>, All Rights Reserved</p>
+                        <p class="copyright-text">&copy; 2025 <a href="https://www.linkedin.com/in/abdullah-khalid-36ba46261/">Abdullah Khalid</a>, All Rights Reserved</p>
                     </div>
                 </div>
             </div>
