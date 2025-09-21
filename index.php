@@ -341,6 +341,11 @@
         <!-- Feature area start here -->
         <section class="feature-five-area have-margin pt-130" id="services-menu">
             <div class="container">
+                 <div class="solution__header text-center mb-5">
+                        <h2 class="wow splt-txt " data-splitting>
+                            Our Services
+                        </h2>
+                    </div>
                 <div class="feature-five__wrp bg-sub">
                     <div class="row g-2">
                         <div class="col-lg-3">
@@ -821,7 +826,7 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><span  class="hover-link-light">Subhan Bhatti</span></h4>
-                                    <span class="sub-title">ACCA Qualified</span>
+                                    <span class="sub-title">ACCA</span>
 
                                 </div>
                             </div>
@@ -833,7 +838,7 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><span  class="hover-link-light">Wasey Tanoli</span></h4>
-                                    <span class="sub-title">ACCA Qualified</span>
+                                    <span class="sub-title">ACCA</span>
 
                                 </div>
                             </div>
@@ -845,7 +850,7 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><span  class="hover-link-light">Asjad Ali</span></h4>
-                                    <span class="sub-title">ACCA Trainee</span>
+                                    <span class="sub-title">Bookkeeper</span>
                                 </div>
                             </div>
                         </div>
@@ -857,7 +862,7 @@
                                 <div class="content">
                                     <h4 class="title"><span href="T1" class="hover-link-light">Aarayz Khan
                                         </span></h4>
-                                    <span class="sub-title">ACCA Finalist</span>
+                                    <span class="sub-title">Bookkeeper</span>
                                 </div>
                             </div>
                         </div>
